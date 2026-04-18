@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Вход в систему</title>
+    <style>
+        /* ПОЛНОЭКРАННЫЙ РЕЖИМ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            width: 100%;
+            min-height: 100vh;
+            height: 100%;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .login-box {
+            background: white;
+            padding: 80px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            width: 90%;
+            max-width: 800px;
+            margin: 20px;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 50px;
+            font-size: 48px;
+        }
+        
+        .input-group {
+            margin-bottom: 30px;
+        }
+        
+        label {
+            display: block;
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #555;
+            font-weight: bold;
+        }
+        
+        input {
+            width: 100%;
+            padding: 25px;
+            border: 3px solid #ddd;
+            border-radius: 15px;
+            font-size: 24px;
+            transition: all 0.3s;
+        }
+        
+        input:focus {
+            border-color: #9b59b6;
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(155, 89, 182, 0.2);
+        }
+        
+        button {
+            width: 100%;
+            padding: 30px;
+            background: #9b59b6;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 32px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 40px 0 30px 0;
+            transition: all 0.3s;
+            letter-spacing: 2px;
+        }
+        
+        button:hover {
+            background: #8e44ad;
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        button:active {
+            transform: scale(0.98);
+        }
+        
+        .info {
+            margin-top: 40px;
+            font-size: 22px;
+            color: #666;
+            text-align: center;
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 20px;
+            border: 2px solid #e9ecef;
+        }
+        
+        .info p {
+            margin: 15px 0;
+        }
+        
+        .info-title {
+            font-size: 26px;
+            color: #333;
+            border-bottom: 3px solid #9b59b6;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .admin-info {
+            background: #f1c40f;
+            color: #333;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        
+        .user-info {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 12px;
+            margin: 10px 0;
+            font-size: 22px;
+        }
+        
+        strong {
+            color: #9b59b6;
+            font-size: 24px;
+        }
+        
+        @media (max-width: 768px) {
+            .login-box {
+                padding: 40px;
+                width: 95%;
+            }
+            
+            h2 {
+                font-size: 36px;
+            }
+            
+            input, button {
+                padding: 20px;
+                font-size: 20px;
+            }
+            
+            .info {
+                font-size: 18px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>🔐 Вход в систему</h2>
+        
+        <form action="/login" method="POST">
+            <div class="input-group">
+                <label>Имя пользователя:</label>
+                <input type="text" name="username" placeholder="Введите логин" required autofocus>
+            </div>
+            
+            <div class="input-group">
+                <label>Пароль:</label>
+                <input type="password" name="password" placeholder="Введите пароль" required>
+            </div>
+            
+            <button type="submit">➡️ ВОЙТИ В СИСТЕМУ</button>
+        </form>
+        
+        <div class="info">
+            <div class="info-title">📋 Тестовые данные</div>
+            
+            <div class="admin-info">
+                👑 АДМИНИСТРАТОР
+            </div>
+            <div class="user-info">
+                Логин: <strong>admin</strong> | Пароль: <strong>admin</strong>
+            </div>
+            
+            <div style="margin: 30px 0; border-top: 2px dashed #ddd;"></div>
+            
+            <div class="admin-info" style="background: #3498db;">
+                👤 ОБЫЧНЫЕ ПОЛЬЗОВАТЕЛИ
+            </div>
+            <div class="user-info">
+                Логин: <strong>ivan</strong> | Пароль: <strong>123456</strong>
+            </div>
+            <div class="user-info">
+                Логин: <strong>maria</strong> | Пароль: <strong>qwerty</strong>
+            </div>
+            <div class="user-info">
+                Логин: <strong>petr</strong> | Пароль: <strong>password</strong>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

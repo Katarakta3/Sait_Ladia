@@ -1,0 +1,184 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 20px;
+    background: #f5f5f5;
+    background-image: url('Images/Phon.png'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+html {
+    font: 16px;
+}
+
+/* Контейнер для контента */
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Сетка туров */
+.Tours {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 90%;
+    max-width: 1300px;
+    margin: 40px auto;
+}
+
+/* Стили для карточек туров */
+.tour-card-link {
+    display: block;
+    width: 100%;
+}
+
+.tour-card-link img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.tour-card-link img:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+}
+
+.back-button-tours {
+    position: fixed;
+    left: 40px;
+    top: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 45px;
+    background: rgba(64, 156, 255, 0.65);
+    color: beige;
+    text-decoration: none;
+    border-radius: 60px;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    letter-spacing: 1px;
+}
+
+/* ПОДВАЛ */
+.footer {
+    background: linear-gradient(135deg, #1a2632 0%, #2c3e50 100%);
+    color: #ecf0f1;
+    padding: 30px 80px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 28px;
+    margin-bottom: 12px;
+    color: #b96b4a;
+}
+
+.footer-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #bdc3c7;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 5px 15px;
+    border-radius: 25px;
+}
+
+.footer-links a:hover {
+    color: #b96b4a;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    color: #95a5a6;
+}
+
+.footer-copyright a {
+    color: #b96b4a;
+    text-decoration: none;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .Tours {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 95%;
+    }
+    
+    .footer {
+        padding: 20px 30px;
+    }
+    
+    .footer-content h3 {
+        font-size: 22px;
+    }
+    
+    .footer-content p {
+        font-size: 14px;
+    }
+    
+    .footer-links {
+        gap: 20px;
+    }
+    
+    .footer-links a {
+        font-size: 14px;
+    }
+    
+    .back-button-tours {
+        padding: 12px 25px;
+        font-size: 1.2rem;
+        left: 15px;
+        top: 15px;
+    }
+}

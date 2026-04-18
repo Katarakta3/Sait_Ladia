@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Панель администратора</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #2c3e50;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .admin-badge {
+            background: #e74c3c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 14px;
+        }
+        
+        .menu {
+            margin: 30px 0;
+        }
+        
+        .menu a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-right: 10px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        .menu a:hover {
+            background: #2980b9;
+        }
+        
+        .logout {
+            background: #95a5a6;
+        }
+        
+        .logout:hover {
+            background: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>👑 Административная панель</h1>
+        <div class="admin-badge">АДМИНИСТРАТОР</div>
+        
+        <div class="menu">
+            <a href="#">📊 Статистика</a>
+            <a href="#">👥 Управление пользователями</a>
+            <a href="#">⚙️ Настройки</a>
+            <a href="/" class="logout">🚪 Выйти</a>
+        </div>
+        
+        <h3>Доступные функции администратора:</h3>
+        <ul>
+            <li>Просмотр всех пользователей</li>
+            <li>Добавление/удаление пользователей</li>
+            <li>Изменение прав доступа</li>
+            <li>Просмотр системных логов</li>
+        </ul>
+        
+        <p>✅ Вы вошли как администратор</p>
+    </div>
+</body>
+</html>

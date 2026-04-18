@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo{
+  text-align: center; 
+}
+html{
+  font-size: 20px;
+}
+
+.gallery {
+   /* display: flex;
+    justify-content: space-between; /* равные расстояния между картинками */
+    /*align-items: center; /* выравнивание по вертикали */
+    /*gap: 1px; /* расстояние между картинками */
+    /*padding: 100px;
+    flex-wrap: wrap; /* перенос на новую строку при необходимости */
+    display: grid;
+  gap: 10px;
+  size: 50%;
+
+  grid-template-areas:
+    "A A A";
+
+}
+
+.gallery img {
+    width: 30%; /* каждая картинка занимает 30% ширины */
+    max-width: 350px; /* максимальная ширина */
+    height: 300px; /* фиксированная высота */
+    object-fit: cover; /* обрезка без искажений */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.menu 
+{   
+    font-size: 3rem;
+    font: Montserrat;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    color: beige;
+    align-items:inherit; 
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Tours
+{
+   display: flex; /* Включаем flexbox */
+    gap: 20px; /* Расстояние между картинками */
+    justify-content: center; /* Центрируем картинки */
+    flex-wrap: wrap; /* Перенос на новую строку если не помещаются */
+    margin: 20px 0;   
+}
+
+
+[class^="box-"] {
+  background-color: skyblue;
+  /* Размещаем контейнеры по центру */
+  display: grid;
+  place-items: center;
+}
+
+.Picture {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 60px;
+}
+
+.Picture img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.Picture img:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.35);
+  border: 3px solid rgba(185, 107, 74, 0.8);
+}
+
+.Favorit {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.Favorit img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.Favorit img:hover {
+    transform: scale(1.03);
+}
+
+
+a {
+    text-decoration: none; /* Убирает подчеркивание */
+    color: inherit; /* Опционально: делает цвет ссылки как у текста */
+}
+
+
+.content {
+    font-size: clamp(16px, 2vw, 25px);
+    max-width: 1200px;
+    width: 90%;
+    margin: 0; /* Убираем margin: 20px auto */
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
+body {
+   
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Tours {
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  
+}
+
+.Favorit:first-of-type {
+    margin-top: 60px;
+}
+
+.popular-title {
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+/* ПОДВАЛ */
+.footer {
+    background: linear-gradient(135deg, #1a2632 0%, #2c3e50 100%);
+    color: #ecf0f1;
+    padding: 40px 80px;
+    margin-top: 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #b96b4a;
+}
+
+.footer-content p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    color: #bdc3c7;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.footer-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 20px;
+    border-radius: 30px;
+}
+
+.footer-links a:hover {
+    color: #b96b4a;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    color: #95a5a6;
+}
+
+.footer-copyright a {
+    color: #b96b4a;
+    text-decoration: none;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .footer {
+        padding: 25px 30px;
+    }
+    
+    .footer-content h3 {
+        font-size: 24px;
+    }
+    
+    .footer-content p {
+        font-size: 16px;
+    }
+    
+    .footer-links {
+        gap: 20px;
+    }
+    
+    .footer-links a {
+        font-size: 16px;
+        padding: 5px 12px;
+    }
+    
+    .footer-copyright {
+        font-size: 12px;
+    }
+}
