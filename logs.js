@@ -1,19 +1,14 @@
-// create_my_bd.js - СОЗДАНИЕ ВАШЕЙ БАЗЫ ДАННЫХ
 
 const sqlite3 = require('sqlite3');
 const path = require('path');
 
-// Путь к файлу базы данных
 const dbPath = path.join(__dirname, 'bd.db');
 console.log('📁 Создаю базу данных:', dbPath);
 
-// Создаем подключение
 const db = new sqlite3.Database(dbPath);
 
-// Выполняем все операции по порядку
 db.serialize(() => {
     
-    // СОЗДАЕМ ТАБЛИЦУ users (как в вашем коде)
     db.run(`
         CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -24,11 +19,9 @@ db.serialize(() => {
     `);
     console.log('✅ Таблица users создана');
     
-    // ОЧИЩАЕМ таблицу (чтоб начать с чистого листа)
     db.run(`DELETE FROM users`);
     console.log('✅ Таблица очищена');
     
-    // ДОБАВЛЯЕМ пользователей
     const users = [
         ['admin', 'admin', 1],  // admin
         ['ivan', '123456', 0],
@@ -49,7 +42,6 @@ db.serialize(() => {
     stmt.finalize();
     console.log('✅ Пользователи добавлены');
     
-    // ПРОВЕРЯЕМ результат
     db.all(`SELECT id, username, Administrator FROM users`, (err, rows) => {
         if (err) {
             console.log('❌ Ошибка чтения:', err);
@@ -67,7 +59,6 @@ db.serialize(() => {
     });
 });
 
-// Закрываем соединение
 setTimeout(() => {
     db.close();
     console.log('\n👋 Соединение закрыто');

@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 20px;
     background: #f5f5f5;
-    background-image: url('Images/Phon.png'); 
+    background-image: url('Images/Phon.png');
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -16,7 +16,6 @@ html {
     font: 16px;
 }
 
-/* Контейнер для контента */
 .content-wrapper {
     flex: 1;
     display: flex;
@@ -25,17 +24,15 @@ html {
     width: 100%;
 }
 
-/* Сетка туров */
 .Tours {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    width: 90%;
-    max-width: 1300px;
-    margin: 40px auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    width: 85%;
+    max-width: 1400px;
+    margin: 60px auto;
 }
 
-/* Стили для карточек туров */
 .tour-card-link {
     display: block;
     width: 100%;
@@ -43,7 +40,8 @@ html {
 
 .tour-card-link img {
     width: 100%;
-    height: auto;
+    height: 400px;
+    object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
@@ -77,7 +75,6 @@ html {
     letter-spacing: 1px;
 }
 
-/* ПОДВАЛ */
 .footer {
     background: linear-gradient(135deg, #1a2632 0%, #2c3e50 100%);
     color: #ecf0f1;
@@ -143,7 +140,17 @@ html {
     text-decoration: none;
 }
 
-/* Адаптация для мобильных */
+@media (max-width: 1024px) {
+    .Tours {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+    
+    .tour-card-link img {
+        height: 350px;
+    }
+}
+
 @media (max-width: 768px) {
     body {
         padding: 15px;
@@ -151,8 +158,12 @@ html {
     
     .Tours {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 30px;
         width: 95%;
+    }
+    
+    .tour-card-link img {
+        height: 280px;
     }
     
     .footer {
